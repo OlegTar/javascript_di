@@ -1,5 +1,5 @@
 import { implement, inject } from '../src';
-import { Injected } from './myclass1';
+import { Injected } from './injected';
 
 implement('arg1').as(new Injected());
 
