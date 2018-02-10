@@ -2,6 +2,8 @@
 
 I used decorators from ES2016 for implementing a dependency injection.
 
+__Usage__
+
 Injectable.js
 ```js
 //a some class for the demonstration of the injection
