@@ -1,39 +1,40 @@
 # Javascript dependency injection. Proof of concept.
 
-Injected.js
+Injectable.js
 ```js
-export class Injected {
+//a some class for the demonstration of the injection
+export class Injectable {
     constructor(arg) {
     }
 
     method() {
-        console.log('Injected class method')
+        console.log('Injectable class's method')
     }
 }
 ```
 
 example.js
 ```js
-import { implement, inject } from '../src';//functions for dependency injection
-import { Injected } from './injected';//example class for injecting
+import { implement, inject } from '../src';//functions for a dependency injection
+import { Injectable } from './injectable';//example class for the injection
 
-implement('arg1').as(new Injected());//register 'arg1' as concrete object
+implement('arg1').as(new Injectable());//register interface 'arg1' as a concrete object
 
-@inject('arg1')//@inject('arg1', 'arg2') - name(s) of interface(s) for injecting to MyClass
+@inject('arg1')//@inject('arg1', 'arg2') - name(s) of interface(s) for the injection to MyClass
 class MyClass {
-    constructor(arg, test) {//the constructor accepts an argument which will be replaced by IoC and some other arguments
+    constructor(arg, test) {//the constructor accepts an argument which will be replaced by IoC and some another argument
         arg.method();
         console.log(test)
     }
 }
 
 
-let c = new MyClass(1);//call constructor *without* injectatable parameters
+let c = new MyClass(1);//call constructor *without* injectable parameters
 ```
 
 Output:
 ```
-Injected class method
+Injectable class's method
 1
 ```
 
