@@ -3,6 +3,21 @@
 I used decorators from ES2016 for implementing a dependency injection.
 
 __Usage__
+1) call ```implement('<name of interface>').as(<concrete object>);```
+
+example:
+```implement('arg1').as(new Injectable());```
+
+2) declare ```@inject('<name of interface>')``` before your Class:
+```
+@inject('arg1');
+class MyClass {
+}
+```
+The first parameter of the constructor of MyClass will be injected by IOC
+
+
+__Example__
 
 Injectable.js
 ```js
