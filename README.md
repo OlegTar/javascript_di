@@ -33,7 +33,7 @@ class MyClass {
 }
 
 
-let c = new MyClass(1);//call constructor *without* injectable parameters
+let c = new MyClass(1);//call constructor without injectable parameters
 ```
 
 Output:
