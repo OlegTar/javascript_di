@@ -1,5 +1,7 @@
 # Javascript dependency injection. Proof of concept.
 
+I used decorators from ES2016 for implementing a dependency injection.
+
 Injectable.js
 ```js
 //a some class for the demonstration of the injection
