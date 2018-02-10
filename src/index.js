@@ -8,7 +8,7 @@ export function inject(...interfaceNames) {
         }
     });
 
-    return (classFunction, ) => {
+    return (classFunction) => {
         return function(...args) {
             const injectedArgs = interfaceNames.map(interfaceName => ioc[interfaceNames]);
             args = [...injectedArgs, ...args];
