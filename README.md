@@ -8,7 +8,7 @@ export class Injectable {
     }
 
     method() {
-        console.log('Injectable class's method');
+        console.log('Injectable class\'s method');
     }
 }
 ```
