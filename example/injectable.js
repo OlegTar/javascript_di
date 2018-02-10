@@ -1,4 +1,4 @@
-export class Injected {
+export class Injectable {
     constructor(arg) {
     }
 

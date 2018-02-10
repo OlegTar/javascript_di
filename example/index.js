@@ -1,7 +1,7 @@
 import { implement, inject } from '../src';
-import { Injected } from './injected';
+import { Injectable } from './injectable';
 
-implement('arg1').as(new Injected());
+implement('arg1').as(new Injectable());
 
 @inject('arg1')
 class MyClass {
