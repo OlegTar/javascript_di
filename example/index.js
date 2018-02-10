@@ -1,8 +1,15 @@
-import { IocContainer, testDecorator } from '../src'
+import { implement, inject } from '../src';
+import { Injected } from './myclass1';
 
-@testDecorator
-class MyClass  {
+implement('arg1').as(new Injected());
 
+@inject('arg1')
+class MyClass {
+    constructor(arg, test) {
+        arg.method();
+        console.log(test)
+    }
 }
-let c = new IocContainer();
-c.test();
+
+
+let c = new MyClass(1);
